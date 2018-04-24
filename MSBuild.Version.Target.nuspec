@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <package >
-  <metadata>
+  <metadata minClientVersion="2.5">
     <id>MSBuild.Version.Target</id>
     <version>1.0.0</version>
-    <title>MSBuild Version Targets</title>
+    <title>MSBuild Version Target</title>
     <authors>Guilherme Branco Stracini</authors>
     <owners>Guilherme Branco Stracini</owners>
     <projectUrl>https://github.com/guibranco/MSBuild.Version.Target</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/guibranco/MSBuild.Version.Target/master/Icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A custom build target to increase project version (AssemblyInfo.cs) automatically on each build (non-RELEASE only)</description>
+    <description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
     <copyright>Copyright 2018 Guilherme Branco Stracini</copyright>
-    <tags>Version Build Targets</tags>
+    <tags>MSBuild automatic auto automaticly version build target targets</tags>
   </metadata>
   <files>
 	<file src="readme.txt" target="" />
