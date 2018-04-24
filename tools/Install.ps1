@@ -63,6 +63,6 @@ function Set-PackageToBeDevelopmentDependency($PackageId, $ProjectDirectoryPath)
         Write-Debug "Could not find packages.config file at '$packagesConfigFilePath'."
     }
 }
- 
+
 # Set this NuGet Package to be installed as a Development Dependency.
 Set-PackageToBeDevelopmentDependency -PackageId $package.Id -ProjectDirectoryPath ([System.IO.Directory]::GetParent($project.FullName))

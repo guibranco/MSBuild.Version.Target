@@ -12,11 +12,14 @@
     <description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
     <copyright>Copyright 2018 Guilherme Branco Stracini</copyright>
     <tags>MSBuild automatic auto automaticly version build target targets</tags>
+	<contentFiles>
+		<files include="ContentFiles\Properties\Version.txt" buildAction="None" />
+    </contentFiles>
   </metadata>
   <files>
 	<file src="readme.txt" target="" />
-	<file src="content\Properties\Version.txt" target="content\Properties\Version.txt" />
-	<file src="tools\Install.ps1" target="tools\Install.ps1" />
-	<file src="build\**" target="build" />
+	<file src="Content\Properties\Version.txt" target="Content\Properties\Version.txt" />
+	<file src="Tools\Install.ps1" target="Tools\Install.ps1" />
+	<file src="Build\**" target="Build" />
   </files>
 </package>
