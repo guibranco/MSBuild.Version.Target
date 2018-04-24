@@ -74,11 +74,16 @@ function Set-VersionFileBuildActionToNone()
     # Find the node containing the file. The tag "Content" may be replace by "None" depending of the case, check your .csproj file.
     $xmlNode = Select-Xml "//msb:Project/msb:ItemGroup/msb:Content[@Include='Properties\Version.txt']" $doc -Namespace @{msb = $namespace}
 
-
     #check if the node exists.
     if($xmlNode -ne $null)
     {
-        $xmlNode.ParentNode.RemoveChild($xmlNode)
+        $parent = $xmlNode.Node.ParentNode
+        $parent.RemoveChild($xmlNode)
+        
+        $xmlNode = $doc.CreateElement("None", $namespace)
+        $xmlNode.SetAttribute("Include", "Properties\Version.txt")
+        $parent.AppendChild($xmlNode)
+
         $doc.Save($project.FullName)
     }
 }
