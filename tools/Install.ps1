@@ -81,10 +81,10 @@ function Set-VersionFileBuildActionToNone()
         $none = $doc.CreateElement("None", $namespace)
         $att = $doc.CreateAttribute("Include")
         $none.Attributes.Append($att)
-        $att.Value = "Version.txt"
+        $att.Value = "Properties\Version.txt"
         
         $parent = $xmlNode.ParentNode
-        $parent.Remove($xmlNode)
+        $parent.RemoveChild($xmlNode)
         $parent.AppendChild($none)
         $doc.Save($project.FullName)
     }
