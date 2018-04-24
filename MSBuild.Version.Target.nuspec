@@ -17,6 +17,5 @@
 	<file src="readme.txt" target="" />
 	<file src="content/Version.txt" target="Properties/Version.txt" />
 	<file src="tools/Install.ps1" target="tools/Install.ps1" />
-	<file src="tools/Uninstall.ps1" target="tools/Uninstall.ps1" />
   </files>
 </package>
