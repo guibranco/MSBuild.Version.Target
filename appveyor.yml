@@ -1,9 +1,8 @@
 version: 1.0.{build}
 skip_tags: true
-build:
-  publish_nuget: true
-  parallel: true
-  verbosity: normal
+image: Visual Studio 2017
+build_script:
+- cmd: nuget pack MSBuild.Version.Target.nuspec
 deploy:
 - provider: Environment
   name: NuGet
