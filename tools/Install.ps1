@@ -64,5 +64,34 @@ function Set-PackageToBeDevelopmentDependency($PackageId, $ProjectDirectoryPath)
     }
 }
 
+function Set-VersionFileBuildActionToNone()
+{
+    # Load project XML.
+    $doc = New-Object System.Xml.XmlDocument
+    $doc.Load($project.FullName)
+    $namespace = 'http://schemas.microsoft.com/developer/msbuild/2003'
+
+    # Find the node containing the file. The tag "Content" may be replace by "None" depending of the case, check your .csproj file.
+    $xmlNode = Select-Xml "//msb:Project/msb:ItemGroup/msb:Content[@Include='Version.txt']" $doc -Namespace @{msb = $namespace}
+
+
+    #check if the node exists.
+    if($xmlNode -ne $null)
+    {
+        $none = $doc.CreateElement("None", $namespace)
+        $att = $doc.CreateAttribute("Include")
+        $none.Attributes.Append($att)
+        $att.Value = "Version.txt"
+        
+        $parent = $xmlNode.ParentNode
+        $parent.Remove($xmlNode)
+        $parent.AppendChild($none)
+        $doc.Save($project.FullName)
+    }
+}
+
 # Set this NuGet Package to be installed as a Development Dependency.
 Set-PackageToBeDevelopmentDependency -PackageId $package.Id -ProjectDirectoryPath ([System.IO.Directory]::GetParent($project.FullName))
+
+# Set the Version.txt file in the .csproj to None (<Compile> to <None>) so the file is not redistribuited or included in the releases.
+Set-VersionFileBuildActionToNone
