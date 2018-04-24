@@ -24,11 +24,9 @@ After installation, open **Properties>Version.txt** and update the file to match
 Open the **.csproj** file of the project (via Notepad, Notepad++, VS Code, any text editor you prefer) and at the bottom of the file add the following code (NuGet dosen't allow changes in the .csproj automaticly):
 
 ```xml
-
-<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
 <Target Name="BeforeBuild">
     //..others targets calls already in your .csproj BeforeBuild target, if any.
-    <CallTarget Targets="Version" />
+    <CallTarget Targets="MSBuild.Version.Target" />
 </Target>
 ```
 Be careful, check if you already have a target named "**BeforeBuild**" in your .csproj, if so, just call the target to increment, else create the Target **BeforeBuild** as the example above

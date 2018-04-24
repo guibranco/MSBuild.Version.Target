@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>MSBuild.Version.Target</id>
-    <version>1.0.0.0</version>
+    <version>1.0.0</version>
     <title>MSBuild Version Targets</title>
     <authors>Guilherme Branco Stracini</authors>
     <owners>Guilherme Branco Stracini</owners>
@@ -16,5 +16,7 @@
   <files>
 	<file src="readme.txt" target="" />
 	<file src="content/Version.txt" target="Properties/Version.txt" />
+	<file src="tools/Install.ps1" target="tools/Install.ps1" />
+	<file src="tools/Uninstall.ps1" target="tools/Uninstall.ps1" />
   </files>
 </package>

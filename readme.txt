@@ -14,13 +14,9 @@ Major version, Minor version, Build (incremented, every build)
 Make sure that you have installed:
 - MSBuildExtensions (https://github.com/loresoft/msbuildtasks)
 
-Import the MSBuild.Community.Tasks.Targets in your *.csproj
-
-<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
-
 Then just call the Version target inside your BeforeBuild target, like this:
 
 <Target Name="BeforeBuild">
 	//..others targets calls.
-    <CallTarget Targets="Version" />
+    <CallTarget Targets="MSBuild.Version.Target" />
 </Target>
