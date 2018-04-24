@@ -2,11 +2,9 @@ version: 1.0.{build}
 skip_tags: true
 image: Visual Studio 2017
 build_script:
-- cmd: nuget pack MSBuild.Version.Target.nuspec
-- cmd: nuget setApiKey %api_key%
-- cmd: nuget push MSBuild.Version.Target.%APPVEYOR_BUILD_VERSION%.nupkg
+- cmd: nuget pack MSBuild.Version.Target.nuspec -Version %APPVEYOR_BUILD_VERSION%
 environment:
     api_key:
-        secure: /mTZTVNWW3v1EoKQE5lqThYK62v83ypEx4tXMtMvBAkDZp6pbVVZ5j/gFVLd3EdY
+        secure: e62/4bEisGjm/1arxy0Xv+RKQvlcakQM8mLREyTgi78QbSKLhiNQrGljOzUDk1pA
 artifacts:
 - path: '**\*nupkg'
