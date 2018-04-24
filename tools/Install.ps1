@@ -66,11 +66,8 @@ function Set-PackageToBeDevelopmentDependency($PackageId, $ProjectDirectoryPath)
 
 function Set-VersionFileBuildActionToNone()
 {
-    $configItem = $project.ProjectItems.Item("Properties\Version.txt")
-
-    $buildAction = $configItem.Properties.Item("BuildAction")
-    $buildAction.Value = 0
-
+    $configItem = $project.ProjectItems.Item("Properties").ProjectItems.Item("Version.txt")
+    $configItem.Properties.Item("BuildAction").Value = 0
 }
 
 # Set this NuGet Package to be installed as a Development Dependency.
