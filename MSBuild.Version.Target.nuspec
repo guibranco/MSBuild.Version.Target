@@ -7,6 +7,7 @@
     <authors>Guilherme Branco Stracini</authors>
     <owners>Guilherme Branco Stracini</owners>
     <projectUrl>https://github.com/guibranco/MSBuild.Version.Target</projectUrl>
+	<licenseUrl>https://github.com/guibranco/MSBuild.Version.Target/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
     <copyright>Copyright 2018 Guilherme Branco Stracini</copyright>
@@ -14,8 +15,8 @@
   </metadata>
   <files>
 	<file src="readme.txt" target="" />
-	<file src="content/Version.txt" target="Properties/Version.txt" />
-	<file src="tools/Install.ps1" target="tools/Install.ps1" />
+	<file src="content\Properties\Version.txt" target="content\Properties\Version.txt" />
+	<file src="tools\Install.ps1" target="tools\Install.ps1" />
 	<file src="build\**" target="build" />
   </files>
 </package>
