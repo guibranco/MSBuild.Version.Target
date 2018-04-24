@@ -72,7 +72,7 @@ function Set-VersionFileBuildActionToNone()
     $namespace = 'http://schemas.microsoft.com/developer/msbuild/2003'
 
     # Find the node containing the file. The tag "Content" may be replace by "None" depending of the case, check your .csproj file.
-    $xmlNode = Select-Xml "//msb:Project/msb:ItemGroup/msb:Content[@Include='Version.txt']" $doc -Namespace @{msb = $namespace}
+    $xmlNode = Select-Xml "//msb:Project/msb:ItemGroup/msb:Content[@Include='Properties\Version.txt']" $doc -Namespace @{msb = $namespace}
 
 
     #check if the node exists.
