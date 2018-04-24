@@ -17,5 +17,6 @@
 	<file src="readme.txt" target="" />
 	<file src="content/Version.txt" target="Properties/Version.txt" />
 	<file src="tools/Install.ps1" target="tools/Install.ps1" />
+	<file src="build\**" target="build" />
   </files>
 </package>
