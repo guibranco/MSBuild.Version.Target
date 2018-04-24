@@ -12,21 +12,13 @@ The target updates the AssemblyInfo.cs and the Version.txt of the installed proj
 
 ----------
 
-NuGet package: https://www.nuget.org/packages/MSBuild.Version.Target
+Nuget package: https://www.nuget.org/packages/MSBuild.Version.Target
+
+
 ```ps
 Install-Package MSBuild.Version.Target
 ```
 
 ----------
 
-After installation, open **Properties>Version.txt** and update the file to match your current project version (SemVer like: Major.Minor.Patch, as Patch being the Build incremental).
-
-Open the **.csproj** file of the project (via Notepad, Notepad++, VS Code, any text editor you prefer) and at the bottom of the file add the following code (NuGet dosen't allow changes in the .csproj automaticly):
-
-```xml
-<Target Name="BeforeBuild">
-    //..others targets calls already in your .csproj BeforeBuild target, if any.
-    <CallTarget Targets="MSBuild.Version.Target" />
-</Target>
-```
-Be careful, check if you already have a target named "**BeforeBuild**" in your .csproj, if so, just call the target to increment, else create the Target **BeforeBuild** as the example above
+After installation, open **Properties > Version.txt** and update the file to match your current project version (SemVer like: Major.Minor.Patch, as Patch being the Build incremental).
