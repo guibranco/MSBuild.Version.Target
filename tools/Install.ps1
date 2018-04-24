@@ -77,8 +77,8 @@ function Set-VersionFileBuildActionToNone()
     #check if the node exists.
     if($xmlNode -ne $null)
     {
-        [void]$xmlNode.Node.ParentNode.RemoveChild($xmlNode)
-        Write-Host "Removido"
+        $xmlNode.Node.ParentNode.RemoveChild($xmlNode)
+        Write-Host $doc.OuterXml
         $doc.Save("$($project.FullName).xml")
     }
 }
