@@ -77,9 +77,19 @@ function Set-VersionFileBuildActionToNone()
     #check if the node exists.
     if($xmlNode -ne $null)
     {
-        $xmlNode.Node.ParentNode.RemoveChild($xmlNode)
-        Write-Host $doc.OuterXml
-        $doc.Save("$($project.FullName).xml")
+        $nodeName = "CopyToOutputDirectory"
+
+        #Check if the property already exists, just in case.
+        $property = $xmlNode.Node.SelectSingleNode($nodeName)
+        if($property -eq $null)
+        {
+            $property = $doc.CreateElement($nodeName, $namespace)
+            $property.AppendChild($doc.CreateTextNode("Always"))
+            $xmlNode.Node.AppendChild($property)
+    
+            # Save changes.
+            $doc.Save($project.FullName)
+        }
     }
 }
 
