@@ -4,7 +4,7 @@
 	<PropertyGroup>
 		<VersionFile Condition="'$(VersionFile)'==''">Properties/Version.txt</VersionFile>
 	</PropertyGroup>
-	<Target Name="MSBuildVersionTarget">
+	<Target Name="MSBuildVersionTarget" BeforeTargets="BeforeBuild">
 		<Version Condition="'$(Configuration)' != 'Release'" VersionFile="$(VersionFile)" BuildType="Increment">
 			<Output TaskParameter="Major" PropertyName="Major" />
 			<Output TaskParameter="Minor" PropertyName="Minor" />
