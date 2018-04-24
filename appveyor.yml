@@ -4,5 +4,7 @@ image: Visual Studio 2017
 build_script:
 - cmd: nuget pack MSBuild.Version.Target.nuspec
 deploy:
-- provider: Environment
-  name: NuGet
+- provider: NuGet
+  api_key:
+    secure: /mTZTVNWW3v1EoKQE5lqThYK62v83ypEx4tXMtMvBAkDZp6pbVVZ5j/gFVLd3EdY
+  artifact: /.*\.nupkg/
