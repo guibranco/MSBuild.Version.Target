@@ -1,0 +1,9 @@
+version: 1.0.{build}
+skip_tags: true
+build:
+  publish_nuget: true
+  parallel: true
+  verbosity: normal
+deploy:
+- provider: Environment
+  name: NuGet
