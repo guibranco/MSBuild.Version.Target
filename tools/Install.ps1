@@ -77,13 +77,8 @@ function Set-VersionFileBuildActionToNone()
     #check if the node exists.
     if($xmlNode -ne $null)
     {
-        $parent = $xmlNode.Node.ParentNode
-        $parent.RemoveChild($xmlNode)
+        $xmlNode.Node.ParentNode.RemoveChild($xmlNode)
         
-        $xmlNode = $doc.CreateElement("None", $namespace)
-        $xmlNode.SetAttribute("Include", "Properties\Version.txt")
-        $parent.AppendChild($xmlNode)
-
         $doc.Save($project.FullName)
     }
 }
