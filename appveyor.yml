@@ -3,8 +3,8 @@ skip_tags: true
 image: Visual Studio 2017
 build_script:
 - cmd: nuget pack MSBuild.Version.Target.nuspec
-       nuget setApiKey {api_key}
-       nuget push MSBuild.Version.Target.nupkg
+- cmd: nuget setApiKey {api_key}
+- cmd: nuget push MSBuild.Version.Target.nupkg
 environment:
     api_key:
         secure: /mTZTVNWW3v1EoKQE5lqThYK62v83ypEx4tXMtMvBAkDZp6pbVVZ5j/gFVLd3EdY
