@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<VersionFile Condition="'$(VersionFile)'==''">Properties/Version.txt</VersionFile>
+	</PropertyGroup>
+	<Target Name="Version">
+		<Version Condition="'$(Configuration)' != 'Release'" VersionFile="$(VersionFile)" BuildType="Increment">
+			<Output TaskParameter="Major" PropertyName="Major" />
+			<Output TaskParameter="Minor" PropertyName="Minor" />
+			<Output TaskParameter="Build" PropertyName="Build" />
+		</Version>
+		<Version Condition="'$(Configuration)' == 'Release'" VersionFile="$(VersionFile)">
+			<Output TaskParameter="Major" PropertyName="Major" />
+			<Output TaskParameter="Minor" PropertyName="Minor" />
+			<Output TaskParameter="Build" PropertyName="Build" />
+		</Version>
+		<Message Text="Current version: $(Major).$(Minor).$(Build)" />
+		<FileUpdate Condition="'$(CurrentRevision)' != '' And '$(Configuration)' != 'Release'" Files="Properties\AssemblyInfo.cs" Regex="(\d+)\.(\d+)\.(\d+)" ReplacementText="$(Major).$(Minor).$(Build)" />
+		<FileUpdate Condition="'$(CurrentRevision)' != '' And '$(Configuration)' != 'Release'" Files="$(VersionFile)" Regex="(\d+)\.(\d+)\.(\d+)" ReplacementText="$(Major).$(Minor).$(Build)" />
+	</Target>
+</Project>

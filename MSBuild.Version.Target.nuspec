@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MSBuild.Version.Target</id>
+    <version>1.0.0.0</version>
+    <title>MSBuild Version Targets</title>
+    <authors>Guilherme Branco Stracini</authors>
+    <owners>Guilherme Branco Stracini</owners>
+    <projectUrl>https://github.com/guibranco/MSBuild.Version.Target</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/guibranco/MSBuild.Version.Target/master/Icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A custom build target to increase project version (AssemblyInfo.cs) automatically on each build (non-RELEASE only)</description>
+    <copyright>Copyright 2018 Guilherme Branco Stracini</copyright>
+    <tags>Version Build Targets</tags>
+  </metadata>
+  <files>
+	<file src="readme.txt" target="" />
+	<file src="content/Version.txt" target="Properties/Version.txt" />
+  </files>
+</package>
