@@ -22,3 +22,7 @@ Install-Package MSBuild.Version.Target
 ----------
 
 After installation, open **Properties > Version.txt** and update the file to match your current project version (SemVer like: Major.Minor.Patch, as Patch being the Build incremental).
+
+----------
+
+The configuration (release/debug/whatever) is the configuration passed to the MSBuild call of a project being built. This can be set by the Visual Studio in the *Configuration Manager*, or in a manual/CI building passing the arguments */p:Configuration=Debug* (for a Debug build) activing this tool. 
