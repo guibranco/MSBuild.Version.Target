@@ -25,4 +25,5 @@ After installation, open **Properties > Version.txt** and update the file to mat
 
 ----------
 
-The configuration (release/debug/whatever) is the configuration passed to the MSBuild call of a project being built. This can be set by the Visual Studio in the *Configuration Manager*, or in a manual/CI building passing the arguments */p:Configuration=Debug* (for a Debug build) activing this tool. 
+The configuration mentionend above is the configuration passed to the MSBuild call of a project being built.
+This can be set by the Visual Studio in the *Configuration Manager* or in a manual/CI building passing the arguments */p:Configuration=Debug* (for a Debug build). This mean that any value different from **Release** will activate this tool in the build process. 
