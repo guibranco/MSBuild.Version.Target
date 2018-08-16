@@ -2,11 +2,12 @@
 <package >
   <metadata minClientVersion="2.5">
     <id>MSBuild.Version.Target</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>MSBuild Version Target</title>
     <authors>Guilherme Branco Stracini</authors>
     <owners>Guilherme Branco Stracini</owners>
     <projectUrl>https://github.com/guibranco/MSBuild.Version.Target</projectUrl>
+	<iconUrl>https://raw.githubusercontent.com/guibranco/MSBuild.Version>Target/master/logo.png</iconUrl>
 	<licenseUrl>https://github.com/guibranco/MSBuild.Version.Target/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
