@@ -9,13 +9,16 @@
 			<Output TaskParameter="Major" PropertyName="Major" />
 			<Output TaskParameter="Minor" PropertyName="Minor" />
 			<Output TaskParameter="Build" PropertyName="Build" />
+			<Output TaskParameter="Revision" PropertyName="Revision" />
 		</Version>
 		<Version Condition="'$(Configuration)' == 'Release'" VersionFile="$(VersionFile)">
 			<Output TaskParameter="Major" PropertyName="Major" />
 			<Output TaskParameter="Minor" PropertyName="Minor" />
 			<Output TaskParameter="Build" PropertyName="Build" />
+			<Output TaskParameter="Revision" PropertyName="Revision" />
 		</Version>
 		<Message Text="Current version: $(Major).$(Minor).$(Build)" />
-		<FileUpdate Condition="'$(Configuration)' != 'Release'" Files="Properties\AssemblyInfo.cs" Regex="(\d+)\.(\d+)\.(\d+)(\.(\d+))?" ReplacementText="$(Major).$(Minor).$(Build)" />
+		<FileUpdate Condition="'$(Configuration)' != 'Release'" Files="Properties\AssemblyInfo.cs" Regex="(\d+)\.(\d+)\.(\d+).(\d+)" ReplacementText="$(Major).$(Minor).$(Build).$(Revision)" />
+		<FileUpdate Condition="'$(Configuration)' != 'Release'" Files="Properties\Version.txt" Regex="(\d+)\.(\d+)\.(\d+).(\d+)" ReplacementText="$(Major).$(Minor).$(Build).$(Revision)" />
 	</Target>
 </Project>
