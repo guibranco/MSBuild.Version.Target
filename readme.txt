@@ -15,5 +15,9 @@ Update it with the current version, in the following format: 1.0.0
 On every build (non-RELEASE config) done, file Version.txt and AssemblyInfo.cs will be
 updated with Major version, Minor version, Build (incremented, every build)
 
+V2
+- Dependency in MSBuildTasks nuget package
+
+V1
 Make sure that you have installed:
 - MSBuildExtensions (available at https://github.com/loresoft/msbuildtasks)
