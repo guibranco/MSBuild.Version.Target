@@ -1,12 +1,24 @@
-version: 2.0.{build}
+version: 3.0.{build}
 skip_tags: true
+skip_commits:
+  message: /(Create|Update).*\.(png|jpg|jpeg|bmp|gif|md)/
 image: Visual Studio 2017
 build_script:
 - cmd: nuget pack MSBuild.Version.Target.nuspec -Version %APPVEYOR_BUILD_VERSION%
 artifacts:
 - path: '**\*nupkg'
+  name: Package
 deploy:
-- provider: NuGet
-  api_key:
-    secure: 0gVdLv0Vc0wR31VUAsx0VAN3ehS1CDaM4cO73JIn4gKVNdpsPOcC78b/OryV8dFm
-  skip_symbols: true
+- provider: Environment
+  name: NuGet
+  on:
+   branch: master
+  artifact: Package
+- provider: GitHub
+  on:
+   branch: master
+  tag: $(appveyor_build_version)
+  auth_token:
+    secure: VgYYJdvNLy/n9/uxxlaF0bMpIIrVxCb+dGr66U9nWfPWSN2ySdfuilO8klAw0uvF
+  force_update: true
+  artifact: Package
