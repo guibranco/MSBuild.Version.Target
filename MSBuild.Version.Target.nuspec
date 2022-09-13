@@ -2,17 +2,18 @@
 <package>
    <metadata minClientVersion="2.5">
       <id>MSBuild.Version.Target</id>
-      <version>2.0.1</version>
+      <version>4.0.0</version>
       <title>MSBuild Version Target</title>
       <authors>Guilherme Branco Stracini</authors>
       <owners>Guilherme Branco Stracini</owners>
       <projectUrl>https://github.com/guibranco/MSBuild.Version.Target</projectUrl>
       <repository type="git" url="https://github.com/guibranco/MSBuild.Version.Target" />
-      <iconUrl>https://raw.githubusercontent.com/guibranco/MSBuild.Version.Target/master/logo.png</iconUrl>
-      <licenseUrl>https://github.com/guibranco/MSBuild.Version.Target/blob/master/LICENSE</licenseUrl>
+      <icon>logo.png</icon>
+      <readme>readme.md</readme>
+      <license type="file">LICENSE</license>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
-      <copyright>Copyright 2019 Guilherme Branco Stracini</copyright>
+      <copyright>Copyright 2022 Guilherme Branco Stracini</copyright>
       <tags>MSBuild automatic auto automaticly version build target targets</tags>
       <dependencies>
          <dependency id="MSBuildTasks" version="1.5.0.235" />
@@ -23,5 +24,8 @@
       <file src="Content\Properties\Version.txt" target="Content\Properties\Version.txt" />
       <file src="Tools\Install.ps1" target="Tools\Install.ps1" />
       <file src="Build\**" target="Build" />
+      <file src="..\logo.png" />
+      <file src="..\readme.md" />
+      <file src="..\LICENSE" />
    </files>
 </package>
