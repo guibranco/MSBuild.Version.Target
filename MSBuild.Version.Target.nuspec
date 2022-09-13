@@ -9,7 +9,7 @@
       <projectUrl>https://github.com/guibranco/MSBuild.Version.Target</projectUrl>
       <repository type="git" url="https://github.com/guibranco/MSBuild.Version.Target" />
       <icon>logo.png</icon>
-      <readme>readme.md</readme>
+      <readme>README.md</readme>
       <license type="file">LICENSE</license>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
@@ -25,7 +25,7 @@
       <file src="Tools\Install.ps1" target="Tools\Install.ps1" />
       <file src="Build\**" target="Build" />
       <file src="logo.png" />
-      <file src="readme.md" />
+      <file src="README.md" />
       <file src="LICENSE" />
    </files>
 </package>
