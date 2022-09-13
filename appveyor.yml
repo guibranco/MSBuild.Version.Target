@@ -2,7 +2,7 @@ version: 4.0.{build}
 skip_tags: true
 skip_commits:
   message: /(Create|Update).*\.(png|jpg|jpeg|bmp|gif|md)/
-image: Visual Studio 2017
+image: Visual Studio 2022
 build_script:
 - cmd: nuget pack MSBuild.Version.Target.nuspec -Version %APPVEYOR_BUILD_VERSION%
 artifacts:
@@ -19,6 +19,6 @@ deploy:
    branch: master
   tag: $(appveyor_build_version)
   auth_token:
-    secure: VgYYJdvNLy/n9/uxxlaF0bMpIIrVxCb+dGr66U9nWfPWSN2ySdfuilO8klAw0uvF
+    secure: AD1z81FqZlvGkCEyDzJ3g6sIJ93ecUE9EuqfUxc4CMiFGW139pWZk+/huuTY5jzG
   force_update: true
   artifact: Package
