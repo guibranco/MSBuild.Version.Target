@@ -6,7 +6,7 @@
       <title>MSBuild Version Target</title>
       <authors>Guilherme Branco Stracini</authors>
       <owners>Guilherme Branco Stracini</owners>
-      <projectUrl>https://github.com/guibranco/MSBuild.Version.Target</projectUrl>
+      <projectUrl>https://guibranco.github.io/MSBuild.Version.Target</projectUrl>
       <repository type="git" url="https://github.com/guibranco/MSBuild.Version.Target" />
       <icon>logo.png</icon>
       <readme>README.nuget.md</readme>
