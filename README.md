@@ -3,6 +3,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/bfwtumc7xs6sfh0m?svg=true)](https://ci.appveyor.com/project/guibranco/msbuild-version-target)
 [![MSBuild.Version.Target NuGet Version](https://img.shields.io/nuget/v/MSBuild.Version.Target.svg)](https://www.nuget.org/packages/MSBuild.Version.Target/)
 [![MSBuild.Version.Target NuGet Downloads](https://img.shields.io/nuget/dt/MSBuild.Version.Target.svg)](https://www.nuget.org/packages/MSBuild.Version.Target/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/42d02eaff227c10bb2b3/maintainability)](https://codeclimate.com/github/guibranco/MSBuild.Version.Target/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/42d02eaff227c10bb2b3/test_coverage)](https://codeclimate.com/github/guibranco/MSBuild.Version.Target/test_coverage)
 
 Provides a NuGet package that adds functionality to your project to auto increment the version build before every non release configuration build. 
 
