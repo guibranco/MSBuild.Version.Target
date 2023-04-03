@@ -4,7 +4,7 @@
 
 See the full readme.MD at:
 
-https://github.com/guibranco/MSBuild.Version.Target/blob/master/README.md
+https://github.com/guibranco/MSBuild.Version.Target/blob/main/README.md
 
 This Nuget Package add the functionality of auto update AssemblyInfo.cs file after every 
 build of project.
