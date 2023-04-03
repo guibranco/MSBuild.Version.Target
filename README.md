@@ -1,5 +1,6 @@
 # MSBuild.Version.Target
 
+[![wakatime](https://wakatime.com/badge/github/guibranco/MSBuild.Version.Target.svg)](https://wakatime.com/badge/github/guibranco/MSBuild.Version.Target)
 [![Build status](https://ci.appveyor.com/api/projects/status/bfwtumc7xs6sfh0m?svg=true)](https://ci.appveyor.com/project/guibranco/msbuild-version-target)
 [![MSBuild.Version.Target NuGet Version](https://img.shields.io/nuget/v/MSBuild.Version.Target.svg)](https://www.nuget.org/packages/MSBuild.Version.Target/)
 [![MSBuild.Version.Target NuGet Downloads](https://img.shields.io/nuget/dt/MSBuild.Version.Target.svg)](https://www.nuget.org/packages/MSBuild.Version.Target/)
