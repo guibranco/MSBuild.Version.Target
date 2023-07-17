@@ -10,17 +10,18 @@ artifacts:
   name: Package
   
 deploy:
-- provider: Environment
-  name: NuGet
+- provider: NuGet
+  api_key: $(NUGET_TOKEN)
+  skip_symbols: false
   on:
    branch: main
   artifact: Package
-  
+
 - provider: GitHub
   on:
    branch: main
-  tag: $(appveyor_build_version)
-  auth_token:
-    secure: AD1z81FqZlvGkCEyDzJ3g6sIJ93ecUE9EuqfUxc4CMiFGW139pWZk+/huuTY5jzG
+  tag: v$(appveyor_build_version)
+  description: 'Release of $(SOLUTION_NAME) - v($appveyor_build_version)'
+  auth_token: $(GITHUB_TOKEN)
   force_update: true
   artifact: Package
