@@ -1,1 +1,2 @@
 theme: jekyll-theme-midnight
+description: 🎯 Provides a NuGet package that adds functionality to your project to auto increment the version build and revision before every Debug build.
