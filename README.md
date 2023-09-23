@@ -7,13 +7,15 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/42d02eaff227c10bb2b3/maintainability)](https://codeclimate.com/github/guibranco/MSBuild.Version.Target/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/42d02eaff227c10bb2b3/test_coverage)](https://codeclimate.com/github/guibranco/MSBuild.Version.Target/test_coverage)
 
-Provides a NuGet package that adds functionality to your project to auto increment the version build before every non release configuration build. 
+Provides a NuGet package that adds functionality to your project to auto-increment the version build before every non-release configuration build. 
 
-This package adds a Version.txt with SemVer version (you must update the major and minor version manually, only build is updated via this functionality). 
+This package adds a Version.txt with the SemVer version (you must update the major and minor versions manually, only the build is updated via this functionality). 
 
 The target updates the AssemblyInfo.cs and the Version.txt of the installed project after each build that is not with the Release configuration. 
 
 ----------
+
+## Installation
 
 Nuget package: https://www.nuget.org/packages/MSBuild.Version.Target
 
@@ -24,9 +26,9 @@ Install-Package MSBuild.Version.Target
 
 ----------
 
-After installation, open **Properties > Version.txt** and update the file to match your current project version (SemVer like: Major.Minor.Patch, as Patch being the Build incremental).
+## Instructions
 
-----------
+After installation, open **Properties > Version.txt** and update the file to match your current project version (SemVer like Major.Minor.Patch, as Patch is the Build incremental).
 
-The configuration mentionend above is the configuration passed to the MSBuild call of a project being built.
-This can be set by the Visual Studio in the *Configuration Manager* or in a manual/CI building passing the arguments */p:Configuration=Debug* (for a Debug build). This mean that any value different from **Release** will activate this tool in the build process. 
+The configuration mentioned above is the configuration passed to the MSBuild call of a project being built.
+This can be set by the Visual Studio in the *Configuration Manager* or in a manual/CI building passing the arguments */p:Configuration=Debug* (for a Debug build). This means that any value different from **Release** will activate this tool in the build process. 
