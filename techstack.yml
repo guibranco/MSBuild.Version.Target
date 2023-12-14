@@ -1,11 +1,11 @@
 repo_name: guibranco/MSBuild.Version.Target
-report_id: '08adc4e7b49515a3811f2947922cd8ee'
+report_id: 1e6104d00841df34a364b0be4764561f
 repo_type: Public
-timestamp: '2023-11-09T16:22:02+00:00'
+timestamp: '2023-12-14T09:38:01+00:00'
 requested_by: guibranco
 provider: github
 branch: main
-detected_tools_count: 6
+detected_tools_count: 8
 tools:
 - name: ".NET"
   description: A free, cross-platform, open source developer platform for building
@@ -20,6 +20,17 @@ tools:
   detection_source: MSBuild.Version.Target.nuspec
   last_updated_by: Guilherme Branco Stracini
   last_updated_on: 2019-09-18 19:57:57.000000000 Z
+- name: pgvector
+  description: Open-source vector similarity search for Postgres
+  website_url: https://github.com/pgvector/pgvector/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source: ContentFiles/Properties/Version.txt
+  last_updated_by: Guilherme Branco Stracini
+  last_updated_on: 2020-06-27 16:12:38.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
   website_url: http://git-scm.com/
@@ -51,6 +62,17 @@ tools:
   detection_source: MSBuild.Version.Target.nuspec
   last_updated_by: Guilherme Branco Stracini
   last_updated_on: 2019-09-18 19:57:57.000000000 Z
+- name: LangChain
+  description: Build AI apps with LLMs through composability
+  website_url: https://github.com/hwchase17/langchain
+  open_source: true
+  hosted_saas: false
+  category: Communications
+  sub_category: Large Language Model Tools
+  image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source: ContentFiles/Properties/Version.txt
+  last_updated_by: Guilherme Branco Stracini
+  last_updated_on: 2020-06-27 16:12:38.000000000 Z
 - name: PowerShell
   description: A task automation and configuration management framework
   website_url: https://docs.microsoft.com/en-us/powershell/
@@ -71,7 +93,7 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13510/default_1a07a0db93c46d1d55ade89a05ea4821466fe3fa.png
-  detection_source_url: MSBuild.Version.Target.nuspec
+  detection_source_url: https://github.com/guibranco/MSBuild.Version.Target/blob/main/MSBuild.Version.Target.nuspec
   detection_source: MSBuild.Version.Target.nuspec
   last_updated_by: Guilherme Branco Stracini
   last_updated_on: 2023-04-03 07:49:23.000000000 Z
