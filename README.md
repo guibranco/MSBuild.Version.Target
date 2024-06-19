@@ -9,7 +9,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/42d02eaff227c10bb2b3/test_coverage)](https://codeclimate.com/github/guibranco/MSBuild.Version.Target/test_coverage)
 [![CodeFactor](https://www.codefactor.io/repository/github/guibranco/MSBuild.Version.Target/badge)](https://www.codefactor.io/repository/github/guibranco/MSBuild.Version.Target)
 
-Provides a NuGet package that adds functionality to your project to auto-increment the version build before every non-release configuration build. 
+🎯⚙️ Provides a NuGet package that adds functionality to your project to auto-increment the version build before every non-release configuration build. 
 
 This package adds a Version.txt with the SemVer version (you must update the major and minor versions manually, only the build is updated via this functionality). 
 
