@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <VersionFile Condition="'$(VersionFile)'==''">Properties/Version.txt</VersionFile>
+        <VersionFile Condition="'$(VersionFile)'==''">$(MSBuildThisFileDirectory)..\SolutionVersion.txt</VersionFile>
     </PropertyGroup>
     <Target Name="MSBuildVersionTarget" BeforeTargets="BeforeBuild">
         <Version Condition="'$(Configuration)' != 'Release'" VersionFile="$(VersionFile)" BuildType="Increment">
@@ -18,6 +18,6 @@
         </Version>
         <Message Text="Current version: $(Major).$(Minor).$(Build)" />
         <FileUpdate Condition="'$(Configuration)' != 'Release'" Files="Properties\AssemblyInfo.cs" Regex="(\d+)\.(\d+)\.(\d+).(\d+)" ReplacementText="$(Major).$(Minor).$(Build).$(Revision)" />
-        <FileUpdate Condition="'$(Configuration)' != 'Release'" Files="Properties\Version.txt" Regex="(\d+)\.(\d+)\.(\d+).(\d+)" ReplacementText="$(Major).$(Minor).$(Build).$(Revision)" />
+        <FileUpdate Condition="'$(Configuration)' != 'Release'" Files="$(MSBuildThisFileDirectory)..\SolutionVersion.txt" Regex="(\d+)\.(\d+)\.(\d+).(\d+)" ReplacementText="$(Major).$(Minor).$(Build).$(Revision)" />
     </Target>
 </Project>
