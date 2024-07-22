@@ -26,6 +26,12 @@ Nuget package: https://www.nuget.org/packages/MSBuild.Version.Target
 Install-Package MSBuild.Version.Target
 ```
 
+
+## Versioning
+
+The version number for all projects within the solution is managed centrally using the `SolutionVersion.txt` file located at the root of the repository. Update this file to change the version across all projects.
+
+Ensure consistency by modifying the version only in the `SolutionVersion.txt` file.
 ----------
 
 ## Instructions
