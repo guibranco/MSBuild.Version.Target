@@ -2,22 +2,53 @@
 --------------------------------- MSBuild.Version.Target -----------------------------------
 --------------------------------------------------------------------------------------------
 
-See the full readme.MD at:
+Thank you for using MSBuild.Version.Target! 🎯⚙️  
 
-https://github.com/guibranco/MSBuild.Version.Target/blob/main/README.md
+For the complete documentation, visit:  
+https://github.com/guibranco/MSBuild.Version.Target/  
 
-This Nuget Package add the functionality of auto update AssemblyInfo.cs file after every 
-build of project.
+--------------------------------------------------------------------------------------------
+## Overview
 
-A file named 'Version.txt' was created into the Properties directory.
-Update it with the current version, in the following format: 1.0.0
+This NuGet package adds functionality to automatically update the `AssemblyInfo.cs` file 
+and a version tracking file (`Version.txt`) during every project build (excluding RELEASE builds).  
 
-On every build (non-RELEASE config) done, file Version.txt and AssemblyInfo.cs will be
-updated with Major version, Minor version, Build (incremented, every build)
+### Key Features:
+- Supports **Semantic Versioning (SemVer)**:  
+  - **Major** and **Minor** versions are managed manually.  
+  - **Build** version (Patch) is automatically incremented during builds.
+- Automatically updates `AssemblyInfo.cs` and `Version.txt` after each build.  
+- Fully compatible with CI/CD pipelines.  
 
-V2
-- Dependency in MSBuildTasks nuget package
+--------------------------------------------------------------------------------------------
+## Getting Started
 
-V1
-Make sure that you have installed:
-- MSBuildExtensions (available at https://github.com/loresoft/msbuildtasks)
+1. **Version.txt** File:  
+   Upon installation, a file named `Version.txt` is created in the `Properties` directory.  
+   - Edit this file to set your starting version in the format:  
+     ```
+     Major.Minor.Build (e.g., 1.0.0)
+     ```
+   - **Note**: Major and Minor versions are not updated automatically.
+
+2. **Build Configuration**:  
+   - The auto-increment functionality is triggered during builds for configurations other than `Release`.  
+   - To configure build settings:  
+     - In Visual Studio: Use **Build > Configuration Manager**.  
+     - In CI or command-line builds: Pass `/p:Configuration=<your_configuration>` (e.g., `Debug`).
+
+3. **What Happens During a Build?**  
+   - `Version.txt` is updated with the incremented Build number.  
+   - `AssemblyInfo.cs` is updated with the latest version.
+
+--------------------------------------------------------------------------------------------
+## Version History
+
+### v2
+- Added a dependency on the **MSBuildTasks** NuGet package.
+
+### v1
+- Ensure **MSBuildExtensions** is installed:  
+  Available at https://github.com/loresoft/msbuildtasks.
+
+--------------------------------------------------------------------------------------------
