@@ -13,7 +13,7 @@
 		<license type="file">LICENSE</license>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
-		<copyright>Copyright 2023 Guilherme Branco Stracini</copyright>
+		<copyright>Copyright 2024 Guilherme Branco Stracini</copyright>
 		<tags>MSBuild automatic auto automaticly version build target targets</tags>
 		<dependencies>
 			<dependency id="MSBuildTasks" version="1.5.0.235" />
