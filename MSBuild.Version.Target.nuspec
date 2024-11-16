@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
-   <metadata minClientVersion="2.5">
-      <id>MSBuild.Version.Target</id>
-      <version>4.0.0</version>
-      <title>MSBuild Version Target</title>
-      <authors>Guilherme Branco Stracini</authors>
-      <owners>Guilherme Branco Stracini</owners>
-      <projectUrl>https://guibranco.github.io/MSBuild.Version.Target</projectUrl>
-      <repository type="git" url="https://github.com/guibranco/MSBuild.Version.Target" />
-      <icon>logo.png</icon>
-      <readme>README.md</readme>
-      <license type="file">LICENSE</license>
-      <requireLicenseAcceptance>false</requireLicenseAcceptance>
-      <description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
-      <copyright>Copyright 2023 Guilherme Branco Stracini</copyright>
-      <tags>MSBuild automatic auto automaticly version build target targets</tags>
-      <dependencies>
-         <dependency id="MSBuildTasks" version="1.5.0.235" />
-      </dependencies>
-   </metadata>
-   <files>
-      <file src="readme.txt" target="" />
-      <file src="Content\Properties\Version.txt" target="Content\Properties\Version.txt" />
-      <file src="Tools\Install.ps1" target="Tools\Install.ps1" />
-      <file src="Build\**" target="Build" />
-      <file src="logo.png" />
-      <file src="README.md" />
-      <file src="LICENSE" />
-   </files>
+	<metadata minClientVersion="2.5">
+		<id>MSBuild.Version.Target</id>
+		<version>4.0.0</version>
+		<title>MSBuild Version Target</title>
+		<authors>Guilherme Branco Stracini</authors>
+		<owners>Guilherme Branco Stracini</owners>
+		<projectUrl>https://guibranco.github.io/MSBuild.Version.Target</projectUrl>
+		<repository type="git" url="https://github.com/guibranco/MSBuild.Version.Target" />
+		<icon>logo.png</icon>
+		<readme>README.md</readme>
+		<license type="file">LICENSE</license>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A build target that increments AssemblyInfo version as a SemVer pattern.</description>
+		<copyright>Copyright 2023 Guilherme Branco Stracini</copyright>
+		<tags>MSBuild automatic auto automaticly version build target targets</tags>
+		<dependencies>
+			<dependency id="MSBuildTasks" version="1.5.0.235" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="readme.txt" target="" />
+		<file src="Content\Properties\Version.txt" target="Content\Properties\Version.txt" />
+		<file src="Tools\Install.ps1" target="Tools\Install.ps1" />
+		<file src="Build\**" target="Build" />
+		<file src="logo.png" />
+		<file src="README.md" />
+		<file src="LICENSE" />
+	</files>
 </package>
